@@ -16,6 +16,7 @@ public class HealthCheck implements HealthIndicator {
 			urlConn.setRequestMethod("POST");
 			urlConn.connect();
 			int code = urlConn.getResponseCode();
+			int change = 0;
 			if(code==200) {
 				return Health.up().build();
 				
